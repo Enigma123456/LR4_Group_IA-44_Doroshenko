@@ -7,7 +7,52 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>ЛР №4 — JavaScript</h1>
+  <main class="container">
+    <header class="page-header">
+      <h1>Лабораторна робота №4 — Основи JavaScript</h1>
+      <p class="subtitle">Результати завдань №1–8 виводяться у вкладці <strong>Console</strong> (F12). Нижче — інтерактивне Завдання №9.</p>
+    </header>
+
+    <!-- ЗАВДАННЯ 9 (Варіант 5): Слайд-шоу -->
+    <section class="slideshow-section" aria-label="Слайд-шоу">
+      <h2>Завдання №9 (Варіант 5): Слайд-шоу</h2>
+
+      <div class="controls-panel">
+        <div class="control-group">
+          <label for="slide-width">Ширина (px):</label>
+          <input type="number" id="slide-width" value="640" min="250" max="1100" step="10">
+        </div>
+
+        <div class="control-group">
+          <label for="slide-height">Висота (px):</label>
+          <input type="number" id="slide-height" value="380" min="180" max="700" step="10">
+        </div>
+
+        <div class="control-group">
+          <label for="slide-interval">Інтервал (сек):</label>
+          <input type="number" id="slide-interval" value="2" min="0.5" max="30" step="0.5">
+        </div>
+
+        <div class="control-group checkbox-group">
+          <input type="checkbox" id="slide-loop" checked>
+          <label for="slide-loop">Циклічний перегляд</label>
+        </div>
+      </div>
+
+      <div class="slideshow-viewer" id="slideshow-viewer">
+        <img id="slide-image" src="" alt="Слайд">
+        <div class="slide-caption" id="slide-caption"></div>
+      </div>
+
+      <div class="playback-controls">
+        <button type="button" id="btn-prev">← Назад</button>
+        <button type="button" id="btn-toggle" class="primary">Пауза</button>
+        <button type="button" id="btn-next">Вперед →</button>
+      </div>
+
+      <p class="slide-status" id="slide-status"></p>
+    </section>
+  </main>
 
   <script src="js/lesson-4.js" defer></script>
 </body>
